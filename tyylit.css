@@ -1,10 +1,13 @@
 body {
+    font-family: Rockwell, Arial;
     text-align: center;
     font-size: 151%;
     padding: 13px;
 }
 
 input {
+    font-family: Rockwell, Arial;
+    font-size: 88%;
     border-radius: 8px;
     border-style: solid;
     border-width: 3px;
