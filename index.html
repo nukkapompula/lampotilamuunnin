@@ -9,19 +9,29 @@
 </head>
 <body>
     <h2>~ Lämpötilamuunnin ~</h2>
-    <p>Syötä lämpötila:</p>
+
+    <p>
+        Valitse muutostyyppi (Celsius-Fahrenheit tai Fahrenheit-Celsius):
+    </p>
+    <select>
+        <option value="celsius">°C - °F</option>
+        <option value="fahrenheit">°F - °C</option>
+    </select>
+
+    <form>
+        <p>Muunnetun lämpötilan tarkkuus?</p>
+        <input type="radio" id="1dm" name="desimaalit" value="1 desimaalilla">
+        <label for="1dm">1 desimaali</label><br>
+        <input type="radio" id="2dm" name="desimaalit" value="2 desimaalilla">
+        <label for="2dm">2 desimaalia</label><br>
+        <input type="radio" id="3dm" name="desimaalit" value="3 desimaalilla">
+        <label for="3dm">3 desimaalia</label>
+    </form>
+
+        <p>Syötä lämpötila:</p>
     <form>
         <input type="text">
         <input type="submit" value="Muunna">
-    </form>
-
-    <form>
-    <input type="radio" id="1dm" name="desimaalit" value="1 desimaalilla">
-    <label for="1dm">1 desimaalilla</label><br>
-    <input type="radio" id="2dm" name="desimaalit" value="2 desimaalilla">
-    <label for="2dm">2 desimaalilla</label><br>
-    <input type="radio" id="3dm" name="desimaalit" value="3 desimaalilla">
-    <label for="3dm">3 desimaalilla</label>
     </form>
 
     <script src="toiminnot.js"></script>

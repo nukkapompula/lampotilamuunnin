@@ -5,7 +5,7 @@ body {
     padding: 13px;
 }
 
-input {
+input, select {
     font-family: Rockwell, Arial;
     font-size: 88%;
     border-radius: 8px;
