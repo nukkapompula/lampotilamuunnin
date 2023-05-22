@@ -14,9 +14,9 @@ function tarkastus(event){
     } else {
         let muutosTyyppi = document.getElementById("tyyppi").value;
         if(muutosTyyppi == "c-f"){
-            celsiusF();
+            celsiusF(syote);
         } else {
-            fahrenheitC();
+            fahrenheitC(syote);
         }
         document.getElementById("lukema").value = "";
     }
@@ -24,10 +24,12 @@ function tarkastus(event){
     vastausRivi.style.display = "block";
 }
 
-function celsiusF(event){
-    console.log("celsius-fahreheit, vai?")
+function celsiusF(celsius){
+    let vastaus = (celsius) * 1.8 + 32;
+    vastausRivi.innerHTML = `${celsius}°C on ${vastaus}°F.`;
 }
 
-function fahrenheitC(event){
-    console.log("äffästä ceehen, okay")
+function fahrenheitC(fahrenheit){
+    let vastaus = (fahrenheit - 32) / 1.8;
+    vastausRivi.innerHTML = `${fahrenheit}°F on ${vastaus}°C.`;
 }
