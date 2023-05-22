@@ -26,10 +26,10 @@ function tarkastus(event){
 
 function celsiusF(celsius){
     let vastaus = (celsius) * 1.8 + 32;
-    vastausRivi.innerHTML = `${celsius}°C on ${vastaus}°F.`;
+    vastausRivi.innerHTML = `${celsius}°C on yhtä kuin ${vastaus}°F.`;
 }
 
 function fahrenheitC(fahrenheit){
     let vastaus = (fahrenheit - 32) / 1.8;
-    vastausRivi.innerHTML = `${fahrenheit}°F on ${vastaus}°C.`;
+    vastausRivi.innerHTML = `${fahrenheit}°F on yhtä kuin ${vastaus}°C.`;
 }
