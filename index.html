@@ -14,8 +14,8 @@
         Valitse muutostyyppi (Celsius-Fahrenheit tai Fahrenheit-Celsius):
     </p>
     <select>
-        <option value="celsius">°C - °F</option>
-        <option value="fahrenheit">°F - °C</option>
+        <option id="c-f" value="celsius">°C - °F</option>
+        <option id="f-c" value="fahrenheit">°F - °C</option>
     </select>
 
     <form>
@@ -30,9 +30,11 @@
 
         <p>Syötä lämpötila:</p>
     <form>
-        <input type="text">
+        <input id="lukema" type="text">
         <input type="submit" value="Muunna">
     </form>
+
+    <p id="muunnos"></p>
 
     <script src="toiminnot.js"></script>
 </body>
