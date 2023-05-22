@@ -1,5 +1,8 @@
 let muunnaPainike = document.getElementById("painike");
 let vastausRivi = document.getElementById("muunnos");
+var desiM1 = document.getElementById("1dm");
+var desiM2 = document.getElementById("2dm");
+var desiM3 = document.getElementById("3dm");
 
 muunnaPainike.addEventListener("click", tarkastus);
 
@@ -26,6 +29,13 @@ function tarkastus(event){
 
 function celsiusF(celsius){
     let vastaus = (celsius) * 1.8 + 32;
+    if(desiM1.checked == true){
+        console.log("1 on merkattuna")
+    } else if (desiM2.checked == true) {
+        console.log("2 on merkattuna")
+    } else {
+        console.log("3 on merkattuna")
+    }
     vastausRivi.innerHTML = `${celsius}°C on yhtä kuin ${vastaus}°F.`;
 }
 
