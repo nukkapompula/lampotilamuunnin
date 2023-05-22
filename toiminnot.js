@@ -12,9 +12,22 @@ function tarkastus(event){
         vastausRivi.innerHTML = "Et antanut muunnokseen soveltuvaa arvoa.";
         document.getElementById("lukema").value = "";
     } else {
-        vastausRivi.innerHTML = syote;
+        let muutosTyyppi = document.getElementById("tyyppi").value;
+        if(muutosTyyppi == "c-f"){
+            celsiusF();
+        } else {
+            fahrenheitC();
+        }
         document.getElementById("lukema").value = "";
     }
     
     vastausRivi.style.display = "block";
+}
+
+function celsiusF(event){
+    console.log("celsius-fahreheit, vai?")
+}
+
+function fahrenheitC(event){
+    console.log("äffästä ceehen, okay")
 }
