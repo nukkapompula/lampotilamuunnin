@@ -30,16 +30,21 @@ function tarkastus(event){
 function celsiusF(celsius){
     let vastaus = (celsius) * 1.8 + 32;
     if(desiM1.checked == true){
-        console.log("1 on merkattuna")
+        vastausRivi.innerHTML = `${celsius}°C on yhtä kuin ${vastaus.toFixed(1)}°F.`;
     } else if (desiM2.checked == true) {
-        console.log("2 on merkattuna")
+        vastausRivi.innerHTML = `${celsius}°C on yhtä kuin ${vastaus.toFixed(2)}°F.`;
     } else {
-        console.log("3 on merkattuna")
+        vastausRivi.innerHTML = `${celsius}°C on yhtä kuin ${vastaus.toFixed(3)}°F.`;
     }
-    vastausRivi.innerHTML = `${celsius}°C on yhtä kuin ${vastaus}°F.`;
 }
 
 function fahrenheitC(fahrenheit){
     let vastaus = (fahrenheit - 32) / 1.8;
-    vastausRivi.innerHTML = `${fahrenheit}°F on yhtä kuin ${vastaus}°C.`;
+    if(desiM1.checked == true){
+        vastausRivi.innerHTML = `${fahrenheit}°F on yhtä kuin ${vastaus.toFixed(1)}°C.`;
+    } else if (desiM2.checked == true) {
+        vastausRivi.innerHTML = `${fahrenheit}°F on yhtä kuin ${vastaus.toFixed(2)}°C.`;
+    } else {
+        vastausRivi.innerHTML = `${fahrenheit}°F on yhtä kuin ${vastaus.toFixed(3)}°C.`;
+    }
 }
