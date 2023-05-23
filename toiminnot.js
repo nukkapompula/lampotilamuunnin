@@ -1,8 +1,11 @@
 let muunnaPainike = document.getElementById("painike");
 let vastausRivi = document.getElementById("muunnos");
+let huomautusRivi = document.getElementById("nollapiste");
 var desiM1 = document.getElementById("1dm");
 var desiM2 = document.getElementById("2dm");
 var desiM3 = document.getElementById("3dm");
+const zeroC = -273.15;
+const zeroF = -459.67;
 
 muunnaPainike.addEventListener("click", tarkastus);
 
@@ -13,6 +16,7 @@ function tarkastus(event){
     syote = Number(syote);
     if(isNaN(syote) == true || pituus < 1){
         vastausRivi.innerHTML = "Et antanut muunnokseen soveltuvaa arvoa.";
+        huomautusRivi.style.display = "none";
         document.getElementById("lukema").value = "";
     } else {
         let muutosTyyppi = document.getElementById("tyyppi").value;
@@ -36,6 +40,12 @@ function celsiusF(celsius){
     } else {
         vastausRivi.innerHTML = `${celsius}°C on yhtä kuin ${vastaus.toFixed(3)}°F.`;
     }
+    if(vastaus < zeroF) {
+        huomautusRivi.innerHTML = "Lämpötila alittaa absoluuttisen nollapisteen!"
+        huomautusRivi.style.display = "block";
+    } else {
+        huomautusRivi.style.display = "none";
+    }
 }
 
 function fahrenheitC(fahrenheit){
@@ -46,5 +56,11 @@ function fahrenheitC(fahrenheit){
         vastausRivi.innerHTML = `${fahrenheit}°F on yhtä kuin ${vastaus.toFixed(2)}°C.`;
     } else {
         vastausRivi.innerHTML = `${fahrenheit}°F on yhtä kuin ${vastaus.toFixed(3)}°C.`;
+    }
+    if(vastaus < zeroC) {
+        huomautusRivi.innerHTML = "Lämpötila alittaa absoluuttisen nollapisteen!"
+        huomautusRivi.style.display = "block";
+    } else {
+        huomautusRivi.style.display = "none";
     }
 }
